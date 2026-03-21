@@ -10,7 +10,7 @@ private:
 
 public:
 
-    // Input coordinates
+    
     void getCoordinates() {
         cout << "Enter origin (x1 y1): ";
         cin >> x1 >> y1;
@@ -19,7 +19,7 @@ public:
         cin >> x2 >> y2;
     }
 
-    // Input motion parameters
+    
     void getMotionParameters() {
         cout << "Enter initial velocity: ";
         cin >> initialVelocity;
@@ -36,22 +36,36 @@ public:
         distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
     }
 
-    // Calculate time
+    // Calculate time with error handling
     double calculateTime() {
+
+        // --- Basic error checks ---
+        if (maxSpeed <= 0) {
+            cout << "Error: Max speed must be positive!" << endl;
+            return -1;
+        }
+
+        if (acceleration == 0) {
+            cout << "Error: Acceleration cannot be zero!" << endl;
+            return -1;
+        }
+
+        if (distance < 0) {
+            cout << "Error: Invalid distance!" << endl;
+            return -1;
+        }
 
         double timeToMax = (maxSpeed - initialVelocity) / acceleration;
 
         if (timeToMax < 0)
             timeToMax = 0;
 
-        // Distance covered during acceleration
         double distAccel = (initialVelocity * timeToMax) +
                            (0.5 * acceleration * pow(timeToMax, 2));
 
         double time = 0;
 
         if (distAccel >= distance) {
-            // Rover doesn't reach max speed
 
             double a = 0.5 * acceleration;
             double b = initialVelocity;
@@ -59,10 +73,20 @@ public:
 
             double D = b * b - 4 * a * c;
 
+            if (D < 0) {
+                cout << "Error: No real solution!" << endl;
+                return -1;
+            }
+
             time = (-b + sqrt(D)) / (2 * a);
 
         } else {
-            // Rover reaches max speed, then moves at constant speed
+            // Constant speed phase
+
+            if (maxSpeed == 0) {
+                cout << "Error: Division by zero!" << endl;
+                return -1;
+            }
 
             double remainingDist = distance - distAccel;
             double timeConst = remainingDist / maxSpeed;
@@ -73,10 +97,14 @@ public:
         return time;
     }
 
-    // Display result
+   
     void display(double time) {
-        cout << "\nDistance to destination: " << distance << " meters" << endl;
-        cout << "Time required: " << time << " seconds" << endl;
+        if (time >= 0) {
+            cout << "\nDistance to destination: " << distance << " meters" << endl;
+            cout << "Time required: " << time << " seconds" << endl;
+        } else {
+            cout << "Calculation failed due to invalid input." << endl;
+        }
     }
 };
 
