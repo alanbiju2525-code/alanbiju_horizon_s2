@@ -40,3 +40,5 @@ Maximum speed,
 Acceleration phase,
 Constant speed phase (if needed),
 Final distance and time are displayed.
+
+Task 2 video : https://drive.google.com/file/d/1kbeayv1n8D-1aLhjcV-mY4wo33YVSqjI/view?usp=drive_link
