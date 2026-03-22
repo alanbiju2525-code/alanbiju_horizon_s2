@@ -1,6 +1,4 @@
-# alanbiju_horizon_s2
 
-# alanbiju_horizon_s2
 
 ## 🚀 Rover Motion Simulation in C++
 
