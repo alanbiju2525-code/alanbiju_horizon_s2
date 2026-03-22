@@ -1,35 +1,44 @@
 # alanbiju_horizon_s2
 
-🚀 Rover Motion Simulation (C++)
-📌 About
+# alanbiju_horizon_s2
 
-This project is a simple simulation of a rover moving from one point to another using basic physics concepts.
+## 🚀 Rover Motion Simulation in C++
 
-It calculates:
+C++ program to simulate a rover moving from one point to another and calculate distance and time required using basic physics concepts.
 
-📏 Distance between two coordinates
-⏱️ Time required to reach the destination
+---
 
-The program also considers acceleration and maximum speed, making the calculation more realistic.
+## Features
 
-#⚙️ How it works
-User enters:
-Origin (x1, y1)
-Destination (x2, y2)
+* Calculates distance between two coordinates
+* Computes time using velocity and acceleration
+* Considers maximum speed limit
+* Handles invalid inputs safely
+* Simple and easy-to-understand logic
+
+---
+
+## Concepts Used
+* Classes and Objects (OOP)
+* Functions
+* Mathematical calculations (sqrt, pow)
+* Conditional statements
+* Quadratic equation logic
+
+---
+
+## How the Program Works
+
+* User enters origin coordinates (x1, y1)
+* User enters destination coordinates (x2, y2)
+* Distance is calculated using the distance formula
+
+* User inputs:
 Initial velocity
 Acceleration
 Maximum speed
 
-The program:
-Calculates distance using the distance formula
-
-Computes time based on motion:
+* Time is calculated based on:
 Acceleration phase
 Constant speed phase (if needed)
-
-#🧠 Concepts Used
-Object-Oriented Programming (Classes & Methods)
-Distance Formula
-Basic Kinematics Equations
-Quadratic Equation
-Conditional Statements & Error Handling
+Final distance and time are displayed
