@@ -34,11 +34,11 @@ C++ program to simulate a rover moving from one point to another and calculate d
 * Distance is calculated using the distance formula
 
 * User inputs:
-Initial velocity
-Acceleration
-Maximum speed
+Initial velocity,
+Acceleration,
+Maximum speed,
 
 * Time is calculated based on:
-Acceleration phase
-Constant speed phase (if needed)
-Final distance and time are displayed
+Acceleration phase,
+Constant speed phase (if needed),
+Final distance and time are displayed.
