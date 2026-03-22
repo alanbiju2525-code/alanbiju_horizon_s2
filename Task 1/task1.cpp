@@ -31,15 +31,12 @@ public:
         cin >> maxSpeed;
     }
 
-    // Calculate distance
     void calculateDistance() {
         distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
     }
 
-    // Calculate time with error handling
     double calculateTime() {
 
-        // --- Basic error checks ---
         if (maxSpeed <= 0) {
             cout << "Error: Max speed must be positive!" << endl;
             return -1;
@@ -81,7 +78,7 @@ public:
             time = (-b + sqrt(D)) / (2 * a);
 
         } else {
-            // Constant speed phase
+           
 
             if (maxSpeed == 0) {
                 cout << "Error: Division by zero!" << endl;
