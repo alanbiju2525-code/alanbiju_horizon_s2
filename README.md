@@ -12,19 +12,22 @@ It calculates:
 
 The program also considers acceleration and maximum speed, making the calculation more realistic.
 
-⚙️ How it works
+#⚙️ How it works
 User enters:
 Origin (x1, y1)
 Destination (x2, y2)
 Initial velocity
 Acceleration
 Maximum speed
+
 The program:
 Calculates distance using the distance formula
+
 Computes time based on motion:
 Acceleration phase
 Constant speed phase (if needed)
-🧠 Concepts Used
+
+#🧠 Concepts Used
 Object-Oriented Programming (Classes & Methods)
 Distance Formula
 Basic Kinematics Equations
